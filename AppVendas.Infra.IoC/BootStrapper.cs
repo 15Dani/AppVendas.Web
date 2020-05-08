@@ -19,7 +19,7 @@ namespace AppVendas.Infra.IoC
         public static void RegisterDbContext(IConfiguration configuration, IServiceCollection service)
         {
 
-            service.AddDbContext<VendasContext>(options => options.UseLazyLoadingProxies().UseMySQL(configuration.GetConnectionString("WebVendas")), ServiceLifetime.Scoped);
+            service.AddDbContext<VendasContext>(options => options.UseLazyLoadingProxies().UseMySQL(configuration.GetConnectionString("Appvendas")), ServiceLifetime.Scoped);
 
         }
 
