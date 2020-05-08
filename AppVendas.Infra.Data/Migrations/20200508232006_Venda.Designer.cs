@@ -9,14 +9,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppVendas.Infra.Data.Migrations
 {
     [DbContext(typeof(VendasContext))]
-    [Migration("20200508201340_Venda")]
+    [Migration("20200508232006_Venda")]
     partial class Venda
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.1")
+                .HasAnnotation("ProductVersion", "3.1.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("AppVendas.Domain.Entities.Vendas", b =>
