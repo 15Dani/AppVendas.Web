@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppVendas.Infra.Data.Migrations
 {
     [DbContext(typeof(VendasContext))]
-    [Migration("20200508193230_Venda")]
+    [Migration("20200508201340_Venda")]
     partial class Venda
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,9 +21,9 @@ namespace AppVendas.Infra.Data.Migrations
 
             modelBuilder.Entity("AppVendas.Domain.Entities.Vendas", b =>
                 {
-                    b.Property<byte[]>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("varbinary(16)");
+                        .HasColumnType("int");
 
                     b.Property<string>("Cep")
                         .HasColumnType("text");

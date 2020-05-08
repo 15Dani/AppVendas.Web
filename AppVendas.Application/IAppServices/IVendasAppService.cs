@@ -9,13 +9,13 @@ namespace AppVendas.Application.IAppServices
     {
         IEnumerable<VendasDto> ObterTodos();
 
-        VendasDto ObterPorId(Guid id);
+        VendasDto ObterPorId(int id);
 
         VendasDto Adicionar(VendasDto vendasDto);
 
         void Editar(VendasDto vendasDto);
 
-        void Deleter(Guid Id);
+        void Deleter(int Id);
 
 
 

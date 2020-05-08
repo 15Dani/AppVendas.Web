@@ -6,12 +6,14 @@ namespace AppVendas.Domain.Entities
 {
     public class EntityBase
     {
-        public EntityBase()
-        {
-            Id = Guid.NewGuid();
-        }
+        //public EntityBase()
+        //{
+        //    //Id = Int.NewGuid();
 
-        public Guid Id { get; set; }
+        //    Id = int.Parse();
+        //}
+
+        public int Id { get; set; }
     }
 }
 

@@ -7,7 +7,7 @@ namespace AppVendas.Domain.Interfaces.IRepositories
 {
    public interface IRepositoryRead<TEntity> : IDisposable where TEntity : EntityBase
     {
-        TEntity ObterPorId(Guid id);
+        TEntity ObterPorId(int id);
 
         IEnumerable<TEntity> ObterTodos();
     }

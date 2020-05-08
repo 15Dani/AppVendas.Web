@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using MySql.Data.EntityFrameworkCore.Metadata;
 
 namespace AppVendas.Infra.Data.Migrations
 {
@@ -11,7 +12,8 @@ namespace AppVendas.Infra.Data.Migrations
                 name: "Vendas",
                 columns: table => new
                 {
-                    Id = table.Column<byte[]>(nullable: false),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Nm_cliente = table.Column<string>(nullable: true),
                     Dt_venda = table.Column<DateTime>(nullable: false),
                     Endereco = table.Column<string>(nullable: true),

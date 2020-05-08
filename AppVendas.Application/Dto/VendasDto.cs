@@ -8,8 +8,7 @@ namespace AppVendas.Application.Dto
    public class VendasDto
     {
         [Key]
-        [ScaffoldColumn(false)]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Informe o nome")]
         public string Nm_cliente { get; set; }

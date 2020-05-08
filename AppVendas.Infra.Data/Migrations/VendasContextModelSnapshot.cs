@@ -19,9 +19,9 @@ namespace AppVendas.Infra.Data.Migrations
 
             modelBuilder.Entity("AppVendas.Domain.Entities.Vendas", b =>
                 {
-                    b.Property<byte[]>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("varbinary(16)");
+                        .HasColumnType("int");
 
                     b.Property<string>("Cep")
                         .HasColumnType("text");

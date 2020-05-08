@@ -37,7 +37,7 @@ namespace AppVendas.Infra.Data.Repositories
         {
             return DbSet.ToList();
         }
-        public virtual TEntity ObterPorId(Guid id)
+        public virtual TEntity ObterPorId(int id)
         {
             return DbSet.Find(id);
         }
@@ -53,7 +53,7 @@ namespace AppVendas.Infra.Data.Repositories
             GC.SuppressFinalize(this);
         }
 
-        public virtual void Remover(Guid  id)
+        public virtual void Remover(int  id)
         {
             var entity = new TEntity { Id = id };
             Remover(entity);
@@ -62,6 +62,8 @@ namespace AppVendas.Infra.Data.Repositories
         {
             DbSet.Remove(obj);
         }
+
+       
     }
 }
 

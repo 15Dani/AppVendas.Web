@@ -31,7 +31,7 @@ namespace AppVendas.Application.AppServices
             return _mapper.Map<IEnumerable<VendasDto>>(_vendasRepository.ObterTodos());
         }
 
-        public VendasDto ObterPorId(Guid id)
+        public VendasDto ObterPorId(int id)
         {
             return _mapper.Map<VendasDto>(_vendasRepository.ObterPorId(id));
         }
@@ -66,7 +66,7 @@ namespace AppVendas.Application.AppServices
             }
         }
 
-        public void Deleter (Guid Id)
+        public void Deleter (int Id)
         {
             var vendas = _vendasRepository.ObterPorId(Id);
 
